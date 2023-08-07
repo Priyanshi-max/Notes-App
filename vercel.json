@@ -14,7 +14,7 @@
         "dest": "Backend/index.js"
       },
       {
-        "src": "/notes/(.*)",
+        "src": "/note/(.*)",
         "headers": { "cache-control": "s-maxage=0" },
         "dest": "Backend/index.js"
       },
