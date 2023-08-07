@@ -9,15 +9,11 @@
     ],
     "routes": [
       {
-        "src": "/user/(.*)",
+        "src": "/api/(.*)",
         "headers": { "cache-control": "s-maxage=0" },
         "dest": "Backend/index.js"
       },
-      {
-        "src": "/note/(.*)",
-        "headers": { "cache-control": "s-maxage=0" },
-        "dest": "Backend/index.js"
-      },
+      
       {
         "src": "/static/(.*)",
         "headers": { "cache-control": "s-maxage=31536000, immutable" },

@@ -19,8 +19,8 @@ if(process.env.NODE_ENV==="development"){
 
 app.use(express.json())
 app.use(cookieParser());
-app.use("/user",userRouter)
-app.use("/note",noteRouter)
+app.use("/api/user",userRouter)
+app.use("/api/note",noteRouter)
 
 app.get("/",(req,res)=>{
     res.send(
