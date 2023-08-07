@@ -8,13 +8,14 @@ const { noteRouter } = require("./routes/note.routes");
 require("dotenv").config()
 const port = process.env.PORT
 const app = express();
-app.use(cors(
-    {
-        exposedHeaders: ['Cookie',"Authorization"],
-    credentials:true,
-    origin: 'http://localhost:3000'
-    }
-))
+if(process.env.NODE_ENV==="development"){
+    app.use(cors({
+      exposedHeaders: ['Cookie',"Authorization"],
+      credentials:true,
+      origin: 'http://127.0.0.1:3000'
+    }));
+  
+  }
 
 app.use(express.json())
 app.use(cookieParser());
